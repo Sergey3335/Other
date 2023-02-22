@@ -52,11 +52,12 @@ public class Main {
                     }
                 }
                 if (isOnSale) {
-                    System.out.println("\t" + products[i] + " " + (doBonus ? counts[i] + 1 : counts[i]) + " шт. за " + (prices[i] * (counts[i] / 3 * 2 + counts[i] % 3)) + " руб. (распродажа!)");
+                    System.out.println("\t" + products[i] + " " + (doBonus ? counts[i] + 1 : counts[i]) + " шт. за " + (prices[i] * (counts[i] / 3 * 2 + counts[i] % 3)) + " руб. !!!РАСПРДОЖА!!!, один товар бесплатно + при покупке свыше 1000 рублей ещё товар бесплатно!");
+                    sum -= prices[i] * counts[i];
                     sum += prices[i] * (counts[i] / 3 * 2 + counts[i] % 3);
                 } else {
-                    System.out.println("\t" + products[i] + " " + counts[i] + " шт. за " + (prices[i] * counts[i]) + " руб.");
-                    sum += prices[i] * counts[i];
+                    System.out.println("\t" + products[i] + " " + (doBonus ? counts[i] + 1 : counts[i]) + " шт. за " + (prices[i] * counts[i]) + " руб. + !!!АКЦИЯ!!! при покупке свыше 1000 рублей один товар бесплатно!");
+                    //sum += prices[i] * counts[i];
                 }
             }
         }
